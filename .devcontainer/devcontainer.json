@@ -1,0 +1,22 @@
+{
+    "build": { "dockerfile": "Dockerfile" },
+  
+    "mounts": [
+       "source=${localWorkspaceFolderBasename}-vendor,target=${containerWorkspaceFolder}/vendor,type=volume",
+       "source=${localWorkspaceFolderBasename}-var,target=${containerWorkspaceFolder}/var,type=volume"
+    ],
+
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "bmewburn.vscode-intelephense-client",
+            "junstyle.php-cs-fixer",
+            "xdebug.php-debug",
+            "emallin.phpunit",
+            "rangav.vscode-thunder-client"
+        ]
+      }
+    },
+ 
+    "forwardPorts": [8000]
+  }
